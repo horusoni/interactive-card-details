@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>interactive-card-details-form-main</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
+</head>
+<body>
+
+    <div class="side-bg"></div>
+    
+    <main>
+        <div id="card-front">
+            <div id="logo"> <img src="images/card-logo.svg" alt=""></div>
+            <div id="card-number"></div>
+            <div id="card-name"></div>
+            <div id="card-mm-yy"> 00/00</div>
+        </div>
+
+        <div id="card-back">
+            <div id="cont-cvc">
+                <p id="card-cvc">000</p>
+            </div>
+        </div>
+    </main>
+
+    <section>
+        <div id="form-cont" >
+            <p>CARDHOLDER NAME</p>
+            <input type="text" id="name-inp" class="input-style" placeholder="cardholder name" maxlength="25">
+            <footer id="erro-name"></footer>
+           
+            <p id="p-style">CARD NUMBER</p>
+            <input type="text"  id="number-inp" class="input-style" placeholder="card number" maxlength="19"> <br>
+           
+            <footer id="erro-number"> <!--Wrong format, numbers only--></footer>
+            
+            <div id="exp" >EXP. DATE (MM/YY) CVC</div>
+
+            <input type="text" id="inp-mm" placeholder="mm" maxlength="2">
+            <input type="text" id="inp-yy" placeholder="yy"  maxlength="2">
+            <input type="text" id="inp-cvc" placeholder="cvc"  maxlength="3">
+            <div id="erro-cont">
+                <footer id="exp-error"><!--Can't be blank--></footer>
+             
+            </div>
+            <button id="btn">Confirm</button>
+            
+        </div>
+
+        <div id="success" class="hidden">
+
+            <div>
+                <img src="images/icon-complete.svg" alt="">
+                <h1>THANK YOU!</h1>
+                <p>We've added your card details</p>
+                <button id="btn-continue">Continue</button>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
